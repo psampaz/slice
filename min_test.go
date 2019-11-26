@@ -1,6 +1,9 @@
 package slice
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestMinByte(t *testing.T) {
 	type args struct {
@@ -735,4 +738,11 @@ func TestMinUintptr(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleMinInt() {
+	a := []int{1, 2, 3, 0, 7, 5, 2}
+	min, err := MinInt(a)
+	fmt.Printf("%d, %v", min, err)
+	// Output: 0, <nil>
 }
