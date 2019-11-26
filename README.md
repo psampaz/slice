@@ -47,6 +47,7 @@ You are very welcome to contribute new opearations in this library.
 
 The minimum requirements to accept a pull are the following:
 
+- Use only functions. This is a function based library so struct based operations will not be accepted in order to preserve simplicity and consistency 
 - 100% code coverage
 - Pass golangci checks
 - Precise documentation of each function
@@ -54,7 +55,20 @@ The minimum requirements to accept a pull are the following:
     - apply changes to all functions of this operation
 - If the PR introduces a new operation, then:
     - implement functions for all applicable types
-    - include one testable example
+    - include one testable example at the end of the test file
     - update the table on the Operations section
     - add one example int he Examples section
+    - use a seperate file for each operation
+    - Use the type after the name of the function: use MinInt32  instead of Int32Min
 
+# Test
+
+if you want to run the test suite for this library:
+
+```go
+$ go test -v -cover
+```
+
+# Credits
+
+In order to speedup the development and avoid massive copy paste, the excellent [Genny](https://github.com/cheekybits/enny) library was used.
