@@ -1,0 +1,6 @@
+coverage:
+  status:
+    project:                   # measuring the overall project coverage
+      default:                 # context, you can create multiple ones with custom titles
+        enabled: yes           # must be yes|true to enable this status
+        target: 100
