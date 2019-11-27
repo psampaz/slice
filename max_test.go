@@ -1,6 +1,9 @@
 package slice
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestByteMax(t *testing.T) {
 	type args struct {
@@ -80,9 +83,9 @@ func TestFloat32Max(t *testing.T) {
 		{
 			name: "non empty slice",
 			args: args{
-				a: []float32{1, 4, 5, -34, 2, 100},
+				a: []float32{1.1, 4.1, 5.1, -34.4, 2.2, 100.1},
 			},
-			want:    100,
+			want:    100.1,
 			wantErr: false,
 		},
 	}
@@ -129,9 +132,9 @@ func TestFloat64Max(t *testing.T) {
 		{
 			name: "non empty slice",
 			args: args{
-				a: []float64{1, 4, 5, -34, 2, 100},
+				a: []float64{1.1, 4.1, 5.1, -34.4, 2.2, 100.1},
 			},
-			want:    100,
+			want:    100.1,
 			wantErr: false,
 		},
 	}
@@ -193,6 +196,55 @@ func TestIntMax(t *testing.T) {
 			}
 			if got != tt.want {
 				t.Errorf("MaxInt() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestInt8Max(t *testing.T) {
+	type args struct {
+		a []int8
+	}
+	tests := []struct {
+		name    string
+		args    args
+		want    int8
+		wantErr bool
+	}{
+		{
+			name: "nil slice",
+			args: args{
+				a: nil,
+			},
+			want:    0,
+			wantErr: true,
+		},
+		{
+			name: "empty slice",
+			args: args{
+				a: []int8{},
+			},
+			want:    0,
+			wantErr: true,
+		},
+		{
+			name: "non empty slice",
+			args: args{
+				a: []int8{1, 4, 5, -34, 2, 100},
+			},
+			want:    100,
+			wantErr: false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, err := MaxInt8(tt.args.a)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("MaxInt8() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			if got != tt.want {
+				t.Errorf("MaxInt8() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -340,55 +392,6 @@ func TestInt64Max(t *testing.T) {
 			}
 			if got != tt.want {
 				t.Errorf("MaxInt64() = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}
-
-func TestInt8Max(t *testing.T) {
-	type args struct {
-		a []int8
-	}
-	tests := []struct {
-		name    string
-		args    args
-		want    int8
-		wantErr bool
-	}{
-		{
-			name: "nil slice",
-			args: args{
-				a: nil,
-			},
-			want:    0,
-			wantErr: true,
-		},
-		{
-			name: "empty slice",
-			args: args{
-				a: []int8{},
-			},
-			want:    0,
-			wantErr: true,
-		},
-		{
-			name: "non empty slice",
-			args: args{
-				a: []int8{1, 4, 5, -34, 2, 100},
-			},
-			want:    100,
-			wantErr: false,
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got, err := MaxInt8(tt.args.a)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("MaxInt8() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if got != tt.want {
-				t.Errorf("MaxInt8() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -735,4 +738,11 @@ func TestUintptrMax(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleMaxInt() {
+	a := []int{1, 2, 3, 0, 7, 5, 2}
+	max, err := MaxInt(a)
+	fmt.Printf("%d, %v", max, err)
+	// Output: 7, <nil>
 }
