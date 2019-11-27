@@ -1,6 +1,7 @@
 package slice
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -111,9 +112,9 @@ func TestDeduplicateComplex128(t *testing.T) {
 		{
 			name: "non empty slice",
 			args: args{
-				a: []complex128{complex(1,1), complex(2,2), complex(3,3), complex(3,3), complex(4,4), complex(5,5), complex(3,3)},
+				a: []complex128{complex(1, 1), complex(2, 2), complex(3, 3), complex(3, 3), complex(4, 4), complex(5, 5), complex(3, 3)},
 			},
-			want: []complex128{complex(1,1), complex(2,2), complex(3,3), complex(4,4),complex(5,5)},
+			want: []complex128{complex(1, 1), complex(2, 2), complex(3, 3), complex(4, 4), complex(5, 5)},
 		},
 	}
 	for _, tt := range tests {
@@ -151,9 +152,9 @@ func TestDeduplicateComplex64(t *testing.T) {
 		{
 			name: "non empty slice",
 			args: args{
-				a: []complex64{complex(1,1), complex(2,2), complex(3,3), complex(3,3), complex(4,4), complex(5,5), complex(3,3)},
+				a: []complex64{complex(1, 1), complex(2, 2), complex(3, 3), complex(3, 3), complex(4, 4), complex(5, 5), complex(3, 3)},
 			},
-			want: []complex64{complex(1,1), complex(2,2), complex(3,3), complex(4,4),complex(5,5)},
+			want: []complex64{complex(1, 1), complex(2, 2), complex(3, 3), complex(4, 4), complex(5, 5)},
 		},
 	}
 	for _, tt := range tests {
@@ -763,4 +764,11 @@ func TestDeduplicateUintptr(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleDeduplicateInt() {
+	a := []int{1, 2, 3, 2, 5, 3}
+	a = DeduplicateInt(a)
+	fmt.Printf("%v", a)
+	// Output: [1 2 3 5]
 }

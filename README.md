@@ -39,6 +39,14 @@ Type-safe functions for common Go slice operations.
 
 # Examples
 
+## Deduplicate
+
+Deduplicate performs order preserving, in place deduplication of a slice
+```go
+    a := []int{1, 2, 3, 2, 5, 3}
+    a = slice.DeduplicateInt(a) // [1, 2, 3, 5]
+```
+
 ## Min
 
 Min returns the minimum value of a slice or an error in case of a nil or empty slice.
