@@ -17,25 +17,25 @@ Type-safe functions for common Go slice operations.
 
 |            | Min | Max | Contains | Reverse | Shuffle | Clone | Deduplicate | Insert | Delete |
 | ---------- | --- | --- | -------- | ------- | ------- | ----- | ----------- | ------ | ------ |
-| bool       | ✕   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| byte       | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| complex64  | ✕   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| complex128 | ✕   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| float32    | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| float64    | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| int        | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| int8       | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| int16      | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| int32      | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| int64      | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| rune       | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| string     | ✕   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| uint       | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| uint8      | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| uint16     | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| uint32     | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| uint64     | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
-| uintptr    | ✔   | -   | ✔        | -       | -       | -     | -           | -      | -      |
+| bool       | ✕   | ✕   | ✔        | -       | -       | -     | -           | -      | -      |
+| byte       | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| complex64  | ✕   | ✕   | ✔        | -       | -       | -     | -           | -      | -      |
+| complex128 | ✕   | ✕   | ✔        | -       | -       | -     | -           | -      | -      |
+| float32    | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| float64    | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| int        | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| int8       | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| int16      | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| int32      | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| int64      | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| rune       | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| string     | ✕   | ✕   | ✔        | -       | -       | -     | -           | -      | -      |
+| uint       | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| uint8      | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| uint16     | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| uint32     | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| uint64     | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
+| uintptr    | ✔   | ✔   | ✔        | -       | -       | -     | -           | -      | -      |
 
 # Examples
 
@@ -46,13 +46,21 @@ Min returns the minimum value of a slice or an error in case of a nil or empty s
     a := []int{1, 2, 3, 0, 4, 5}
     min, err := slice.MinInt(a)
 ```
+## Max
+
+Max returns the maximum value of a slice or an error in case of a nil or empty slice.
+```go
+    a := []int{1, 2, 3, 0, 4, 5}
+    max, err := slice.MaxInt(a)
+```
+
+## Contains
 
 Contains checks if a specific value exists in a slice.
 ```go
     a := []int{"a","b","c","d"}
     b := "c"
     exists := slice.Contains(a, "c")
-```
 
 # Contributing
 
