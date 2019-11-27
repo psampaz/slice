@@ -1,6 +1,9 @@
 package slice
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestContainsBool(t *testing.T) {
 	type args struct {
@@ -988,4 +991,11 @@ func TestContainsUintptr(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleContainsInt() {
+	a := []int{1, 2, 3, 0, 7, 5, 2}
+	contains := ContainsInt(a, 7)
+	fmt.Printf("%v", contains)
+	// Output: true
 }
