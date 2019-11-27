@@ -47,13 +47,15 @@ Deduplicate performs order preserving, in place deduplication of a slice
     a = slice.DeduplicateInt(a) // [1, 2, 3, 5]
 ```
 
-## Min
+## Contains
 
-Min returns the minimum value of a slice or an error in case of a nil or empty slice.
+Contains checks if a specific value exists in a slice.
 ```go
-    a := []int{1, 2, 3, 0, 4, 5}
-    min, err := slice.MinInt(a) // 0, nil
+    a := []int{"a","b","c","d"}
+    b := "c"
+    exists := slice.Contains(a, "c") // true
 ```
+
 ## Max
 
 Max returns the maximum value of a slice or an error in case of a nil or empty slice.
@@ -62,13 +64,12 @@ Max returns the maximum value of a slice or an error in case of a nil or empty s
     max, err := slice.MaxInt(a) // 5, nil
 ```
 
-## Contains
+## Min
 
-Contains checks if a specific value exists in a slice.
+Min returns the minimum value of a slice or an error in case of a nil or empty slice.
 ```go
-    a := []int{"a","b","c","d"}
-    b := "c"
-    exists := slice.Contains(a, "c") // true
+    a := []int{1, 2, 3, 0, 4, 5}
+    min, err := slice.MinInt(a) // 0, nil
 ```
 
 # Contributing
