@@ -9,27 +9,33 @@ Type-safe functions for common Go slice operations.
 
 # Operations 
 
-|            | Min |
-| ---------- | --- |
-| bool       | ✕   |
-| byte       | ✔   |
-| complex64  | ✕   |
-| complex128 | ✕   |
-| float32    | ✔   |
-| float64    | ✔   |
-| int        | ✔   |
-| int8       | ✔   |
-| int16      | ✔   |
-| int32      | ✔   |
-| int64      | ✔   |
-| rune       | ✔   |
-| string     | ✕   |
-| uint       | ✔   |
-| uint8      | ✔   |
-| uint16     | ✔   |
-| uint32     | ✔   |
-| uint64     | ✔   |
-| uintptr    | ✔   |
+✔ = Supported 
+
+✕ = Non supported 
+
+\- = Not yet implemented
+
+|            | Min | Max | Contains | Reverse | Shuffle | Clone | Deduplicate | Insert | Delete |
+| ---------- | --- | --- | -------- | ------- | ------- | ----- | ----------- | ------ | ------ |
+| bool       | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
+| byte       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| complex64  | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
+| complex128 | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
+| float32    | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| float64    | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| int        | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| int8       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| int16      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| int32      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| int64      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| rune       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| string     | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
+| uint       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| uint8      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| uint16     | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| uint32     | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| uint64     | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+| uintptr    | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
 
 # Examples
 
@@ -47,7 +53,7 @@ You are very welcome to contribute new opearations in this library.
 
 The minimum requirements to accept a pull are the following:
 
-- Use only functions. This is a function based library so struct based operations will not be accepted in order to preserve simplicity and consistency 
+- Use only functions. This is a function based library so struct based operations will not be accepted, in order to preserve simplicity and consistency 
 - 100% code coverage
 - Pass golangci checks
 - Precise documentation of each function
@@ -58,7 +64,7 @@ The minimum requirements to accept a pull are the following:
     - include one testable example at the end of the test file
     - update the table on the Operations section
     - add one example int he Examples section
-    - use a seperate file for each operation
+    - use a separate file for each operation
     - Use the type after the name of the function: use MinInt32  instead of Int32Min
 
 # Test
@@ -71,4 +77,5 @@ $ go test -v -cover
 
 # Credits
 
-In order to speedup the development and avoid massive copy paste, the excellent [Genny](https://github.com/cheekybits/enny) library was used.
+- SliceTricks (https://github.com/golang/go/wiki/SliceTricks). This was the inspiration behind this library.
+- Genny (https://github.com/cheekybits/genny). In order to speedup the development and avoid massive copy paste, the excellent Genny library was used.
