@@ -47,14 +47,6 @@ Deduplicate performs order preserving, in place deduplication of a slice
     a = slice.DeduplicateInt(a) // [1, 2, 3, 5]
 ```
 
-## Min
-
-Deduplicate performs order preserving, in place deduplication of a slice
-```go
-    a := []int{1, 2, 3, 2, 5, 3}
-    a = slice.DeduplicateInt(a) // [1, 2, 3, 5]
-```
-
 ## Contains
 
 Contains checks if a specific value exists in a slice.
