@@ -51,7 +51,7 @@ Min returns the minimum value of a slice or an error in case of a nil or empty s
 
 You are very welcome to contribute new opearations in this library.
 
-The minimum requirements to accept a pull are the following:
+The minimum requirements to accept a pull request are the following:
 
 - Use only functions. This is a function based library so struct based operations will not be accepted, in order to preserve simplicity and consistency 
 - 100% code coverage
@@ -62,10 +62,10 @@ The minimum requirements to accept a pull are the following:
 - If the PR introduces a new operation, then:
     - implement functions for all applicable types
     - include one testable example at the end of the test file
-    - update the table on the Operations section
-    - add one example int he Examples section
+    - update the table in the Operations section
+    - add one example in the Examples section
     - use a separate file for each operation
-    - Use the type after the name of the function: use MinInt32  instead of Int32Min
+    - use the type after the name of the function: use MinInt32  instead of Int32Min
 
 # Test
 
