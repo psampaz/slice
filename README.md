@@ -21,7 +21,7 @@ Type-safe functions for common Go slice operations.
 | Contains   | ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       | 
 | Copy       | -    | -    | -             | -          | -              | -      | -               | -       | 
 | Cut        | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Deduplicate| -    | -    | -             | -          | -              | -      | -               | -       | 
+| Deduplicate| ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       | 
 | Delete     | -    | -    | -             | -          | -              | -      | -               | -       | 
 | Filter     | -    | -    | -             | -          | -              | -      | -               | -       |
 | Insert     | -    | -    | -             | -          | -              | -      | -               | -       | 
