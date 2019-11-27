@@ -44,14 +44,14 @@ Type-safe functions for common Go slice operations.
 Min returns the minimum value of a slice or an error in case of a nil or empty slice.
 ```go
     a := []int{1, 2, 3, 0, 4, 5}
-    min, err := slice.MinInt(a) // 0
+    min, err := slice.MinInt(a) // 0, nil
 ```
 ## Max
 
 Max returns the maximum value of a slice or an error in case of a nil or empty slice.
 ```go
     a := []int{1, 2, 3, 0, 4, 5}
-    max, err := slice.MaxInt(a) // 5
+    max, err := slice.MaxInt(a) // 5, nil
 ```
 
 ## Contains
