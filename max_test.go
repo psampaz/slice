@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestByteMax(t *testing.T) {
+func TestMaxByte(t *testing.T) {
 	type args struct {
 		a []byte
 	}
@@ -54,7 +54,7 @@ func TestByteMax(t *testing.T) {
 	}
 }
 
-func TestFloat32Max(t *testing.T) {
+func TestMaxFloat32(t *testing.T) {
 	type args struct {
 		a []float32
 	}
@@ -103,7 +103,7 @@ func TestFloat32Max(t *testing.T) {
 	}
 }
 
-func TestFloat64Max(t *testing.T) {
+func TestMaxFloat64(t *testing.T) {
 	type args struct {
 		a []float64
 	}
@@ -152,7 +152,7 @@ func TestFloat64Max(t *testing.T) {
 	}
 }
 
-func TestIntMax(t *testing.T) {
+func TestMaxInt(t *testing.T) {
 	type args struct {
 		a []int
 	}
@@ -201,7 +201,7 @@ func TestIntMax(t *testing.T) {
 	}
 }
 
-func TestInt8Max(t *testing.T) {
+func TestMaxInt8(t *testing.T) {
 	type args struct {
 		a []int8
 	}
@@ -250,7 +250,7 @@ func TestInt8Max(t *testing.T) {
 	}
 }
 
-func TestInt16Max(t *testing.T) {
+func TestMaxInt16(t *testing.T) {
 	type args struct {
 		a []int16
 	}
@@ -299,7 +299,7 @@ func TestInt16Max(t *testing.T) {
 	}
 }
 
-func TestInt32Max(t *testing.T) {
+func TestMaxInt32(t *testing.T) {
 	type args struct {
 		a []int32
 	}
@@ -348,7 +348,7 @@ func TestInt32Max(t *testing.T) {
 	}
 }
 
-func TestInt64Max(t *testing.T) {
+func TestMaxInt64(t *testing.T) {
 	type args struct {
 		a []int64
 	}
@@ -397,7 +397,7 @@ func TestInt64Max(t *testing.T) {
 	}
 }
 
-func TestRuneMax(t *testing.T) {
+func TestMaxRune(t *testing.T) {
 	type args struct {
 		a []rune
 	}
@@ -446,7 +446,7 @@ func TestRuneMax(t *testing.T) {
 	}
 }
 
-func TestUintMax(t *testing.T) {
+func TestMaxUint(t *testing.T) {
 	type args struct {
 		a []uint
 	}
@@ -495,7 +495,7 @@ func TestUintMax(t *testing.T) {
 	}
 }
 
-func TestUint16Max(t *testing.T) {
+func TestMaxUint16(t *testing.T) {
 	type args struct {
 		a []uint16
 	}
@@ -544,7 +544,7 @@ func TestUint16Max(t *testing.T) {
 	}
 }
 
-func TestUint32Max(t *testing.T) {
+func TestMaxUint32(t *testing.T) {
 	type args struct {
 		a []uint32
 	}
@@ -593,7 +593,7 @@ func TestUint32Max(t *testing.T) {
 	}
 }
 
-func TestUint64Max(t *testing.T) {
+func TestMaxUint64(t *testing.T) {
 	type args struct {
 		a []uint64
 	}
@@ -642,7 +642,7 @@ func TestUint64Max(t *testing.T) {
 	}
 }
 
-func TestUint8Max(t *testing.T) {
+func TestMaxUint8(t *testing.T) {
 	type args struct {
 		a []uint8
 	}
@@ -691,7 +691,7 @@ func TestUint8Max(t *testing.T) {
 	}
 }
 
-func TestUintptrMax(t *testing.T) {
+func TestMaxUintptr(t *testing.T) {
 	type args struct {
 		a []uintptr
 	}
