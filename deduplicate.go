@@ -6,7 +6,7 @@ func DeduplicateBool(a []bool) []bool {
 		return a
 	}
 
-	seen := make(map[bool]struct{}, 0)
+	seen := make(map[bool]struct{})
 
 	j := 0
 	for k := range a {
@@ -27,7 +27,7 @@ func DeduplicateByte(a []byte) []byte {
 		return a
 	}
 
-	seen := make(map[byte]struct{}, 0)
+	seen := make(map[byte]struct{})
 
 	j := 0
 	for k := range a {
@@ -48,7 +48,7 @@ func DeduplicateComplex128(a []complex128) []complex128 {
 		return a
 	}
 
-	seen := make(map[complex128]struct{}, 0)
+	seen := make(map[complex128]struct{})
 
 	j := 0
 	for k := range a {
@@ -69,7 +69,7 @@ func DeduplicateComplex64(a []complex64) []complex64 {
 		return a
 	}
 
-	seen := make(map[complex64]struct{}, 0)
+	seen := make(map[complex64]struct{})
 
 	j := 0
 	for k := range a {
@@ -90,7 +90,7 @@ func DeduplicateFloat32(a []float32) []float32 {
 		return a
 	}
 
-	seen := make(map[float32]struct{}, 0)
+	seen := make(map[float32]struct{})
 
 	j := 0
 	for k := range a {
@@ -111,7 +111,7 @@ func DeduplicateFloat64(a []float64) []float64 {
 		return a
 	}
 
-	seen := make(map[float64]struct{}, 0)
+	seen := make(map[float64]struct{})
 
 	j := 0
 	for k := range a {
@@ -132,7 +132,7 @@ func DeduplicateInt(a []int) []int {
 		return a
 	}
 
-	seen := make(map[int]struct{}, 0)
+	seen := make(map[int]struct{})
 
 	j := 0
 	for k := range a {
@@ -153,7 +153,7 @@ func DeduplicateInt16(a []int16) []int16 {
 		return a
 	}
 
-	seen := make(map[int16]struct{}, 0)
+	seen := make(map[int16]struct{})
 
 	j := 0
 	for k := range a {
@@ -174,7 +174,7 @@ func DeduplicateInt32(a []int32) []int32 {
 		return a
 	}
 
-	seen := make(map[int32]struct{}, 0)
+	seen := make(map[int32]struct{})
 
 	j := 0
 	for k := range a {
@@ -195,7 +195,7 @@ func DeduplicateInt64(a []int64) []int64 {
 		return a
 	}
 
-	seen := make(map[int64]struct{}, 0)
+	seen := make(map[int64]struct{})
 
 	j := 0
 	for k := range a {
@@ -216,7 +216,7 @@ func DeduplicateInt8(a []int8) []int8 {
 		return a
 	}
 
-	seen := make(map[int8]struct{}, 0)
+	seen := make(map[int8]struct{})
 
 	j := 0
 	for k := range a {
@@ -237,7 +237,7 @@ func DeduplicateRune(a []rune) []rune {
 		return a
 	}
 
-	seen := make(map[rune]struct{}, 0)
+	seen := make(map[rune]struct{})
 
 	j := 0
 	for k := range a {
@@ -258,7 +258,7 @@ func DeduplicateString(a []string) []string {
 		return a
 	}
 
-	seen := make(map[string]struct{}, 0)
+	seen := make(map[string]struct{})
 
 	j := 0
 	for k := range a {
@@ -279,7 +279,7 @@ func DeduplicateUint(a []uint) []uint {
 		return a
 	}
 
-	seen := make(map[uint]struct{}, 0)
+	seen := make(map[uint]struct{})
 
 	j := 0
 	for k := range a {
@@ -300,7 +300,7 @@ func DeduplicateUint16(a []uint16) []uint16 {
 		return a
 	}
 
-	seen := make(map[uint16]struct{}, 0)
+	seen := make(map[uint16]struct{})
 
 	j := 0
 	for k := range a {
@@ -321,7 +321,7 @@ func DeduplicateUint32(a []uint32) []uint32 {
 		return a
 	}
 
-	seen := make(map[uint32]struct{}, 0)
+	seen := make(map[uint32]struct{})
 
 	j := 0
 	for k := range a {
@@ -342,7 +342,7 @@ func DeduplicateUint64(a []uint64) []uint64 {
 		return a
 	}
 
-	seen := make(map[uint64]struct{}, 0)
+	seen := make(map[uint64]struct{})
 
 	j := 0
 	for k := range a {
@@ -363,7 +363,7 @@ func DeduplicateUint8(a []uint8) []uint8 {
 		return a
 	}
 
-	seen := make(map[uint8]struct{}, 0)
+	seen := make(map[uint8]struct{})
 
 	j := 0
 	for k := range a {
@@ -384,7 +384,7 @@ func DeduplicateUintptr(a []uintptr) []uintptr {
 		return a
 	}
 
-	seen := make(map[uintptr]struct{}, 0)
+	seen := make(map[uintptr]struct{})
 
 	j := 0
 	for k := range a {
