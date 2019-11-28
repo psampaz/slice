@@ -16,6 +16,22 @@ func TestFilterType(t *testing.T) {
 		want []Type
 	}{
 		{
+			name: "nil slice",
+			args: args{
+				a:    nil,
+				keep: func(Type) bool { panic("not implemented") },
+			},
+			want: nil,
+		},
+		{
+			name: "empty slice",
+			args: args{
+				a:    []Type{},
+				keep: func(Type) bool { panic("not implemented") },
+			},
+			want: nil,
+		},		
+		{
 			name: "non empty slice",
 			args: args{
 				a: []Type{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
