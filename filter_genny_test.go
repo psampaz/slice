@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestFilterType1(t *testing.T) {
+func TestFilterType(t *testing.T) {
 	type args struct {
 		a    []Type
 		keep func(x Type) bool
@@ -33,7 +33,7 @@ func TestFilterType1(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := FilterType(tt.args.a, tt.args.keep); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("DeduplicateFloat64() = %v, want %v", got, tt.want)
+				t.Errorf("FilterType() = %v, want %v", got, tt.want)
 			}
 		})
 	}

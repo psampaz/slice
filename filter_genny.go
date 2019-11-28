@@ -5,11 +5,15 @@ import "github.com/cheekybits/genny/generic"
 type Type generic.Type
 
 // FilterType
-func FilterType(a []Type, keep func(x Type) bool) {
+func FilterType(a []Type, keep func(x Type) bool) []Type {
+	if len(a) == 0 {
+		return a
+	}
+
 	n := 0
-	for k := range a {
-		if keep(a[k]) {
-			a[n] = a[k]
+	for _, v := range a {
+		if keep(v) {
+			a[n] = v
 			n++
 		}
 	}
