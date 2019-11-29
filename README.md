@@ -23,7 +23,7 @@ Type-safe functions for common Go slice operations.
 | Cut        | -    | -    | -             | -          | -              | -      | -               | -       | 
 | Deduplicate| ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       | 
 | Delete     | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Filter     | -    | -    | -             | -          | -              | -      | -               | -       |
+| Filter     | ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       |
 | Insert     | -    | -    | -             | -          | -              | -      | -               | -       | 
 | Max        | ✕    | ✔    | ✕             | ✔          | ✔              | ✕      | ✔               | ✔       |
 | Min        | ✕    | ✔    | ✕             | ✔          | ✔              | ✕      | ✔               | ✔       |
@@ -54,6 +54,20 @@ Contains checks if a specific value exists in a slice.
     a := []int{"a","b","c","d"}
     b := "c"
     exists := slice.Contains(a, "c") // true
+```
+
+## slice.Filter
+
+Filter performs in place filtering of a slice based on a predicate
+```go
+    a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    keep := func(x int) bool {
+        if x%2 == 0 {
+            return true
+        }
+        return false
+    }
+    a = slice.Filter(a, keep) // [2, 4, 6, 8 , 10]
 ```
 
 ## Max
