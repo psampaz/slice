@@ -83,10 +83,7 @@ func TestFilterByte(t *testing.T) {
 			args: args{
 				a: []byte{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x byte) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []byte{1, 2, 3, 4},
@@ -230,10 +227,7 @@ func TestFilterFloat32(t *testing.T) {
 			args: args{
 				a: []float32{1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9},
 				keep: func(x float32) bool {
-					if x < 5.5 {
-						return true
-					}
-					return false
+					return x < 5.5
 				},
 			},
 			want: []float32{1.1, 2.2, 3.3, 4.4},
@@ -279,10 +273,7 @@ func TestFilterFloat64(t *testing.T) {
 			args: args{
 				a: []float64{1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9},
 				keep: func(x float64) bool {
-					if x < 5.5 {
-						return true
-					}
-					return false
+					return x < 5.5
 				},
 			},
 			want: []float64{1.1, 2.2, 3.3, 4.4},
@@ -328,10 +319,7 @@ func TestFilterInt(t *testing.T) {
 			args: args{
 				a: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x int) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []int{1, 2, 3, 4},
@@ -377,10 +365,7 @@ func TestFilterInt16(t *testing.T) {
 			args: args{
 				a: []int16{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x int16) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []int16{1, 2, 3, 4},
@@ -426,10 +411,7 @@ func TestFilterInt32(t *testing.T) {
 			args: args{
 				a: []int32{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x int32) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []int32{1, 2, 3, 4},
@@ -475,10 +457,7 @@ func TestFilterInt64(t *testing.T) {
 			args: args{
 				a: []int64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x int64) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []int64{1, 2, 3, 4},
@@ -524,10 +503,7 @@ func TestFilterInt8(t *testing.T) {
 			args: args{
 				a: []int8{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x int8) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []int8{1, 2, 3, 4},
@@ -573,10 +549,7 @@ func TestFilterRune(t *testing.T) {
 			args: args{
 				a: []rune{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x rune) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []rune{1, 2, 3, 4},
@@ -622,10 +595,7 @@ func TestFilterString(t *testing.T) {
 			args: args{
 				a: []string{"a", "b", "c", "d"},
 				keep: func(x string) bool {
-					if x == "a" || x == "d" {
-						return true
-					}
-					return false
+					return x == "a" || x == "d"
 				},
 			},
 			want: []string{"a", "d"},
@@ -671,10 +641,7 @@ func TestFilterUint(t *testing.T) {
 			args: args{
 				a: []uint{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x uint) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []uint{1, 2, 3, 4},
@@ -720,10 +687,7 @@ func TestFilterUint16(t *testing.T) {
 			args: args{
 				a: []uint16{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x uint16) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []uint16{1, 2, 3, 4},
@@ -769,10 +733,7 @@ func TestFilterUint32(t *testing.T) {
 			args: args{
 				a: []uint32{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x uint32) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []uint32{1, 2, 3, 4},
@@ -818,10 +779,7 @@ func TestFilterUint64(t *testing.T) {
 			args: args{
 				a: []uint64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x uint64) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []uint64{1, 2, 3, 4},
@@ -867,10 +825,7 @@ func TestFilterUint8(t *testing.T) {
 			args: args{
 				a: []uint8{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x uint8) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []uint8{1, 2, 3, 4},
@@ -916,10 +871,7 @@ func TestFilterUintptr(t *testing.T) {
 			args: args{
 				a: []uintptr{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				keep: func(x uintptr) bool {
-					if x < 5 {
-						return true
-					}
-					return false
+					return x < 5
 				},
 			},
 			want: []uintptr{1, 2, 3, 4},
@@ -937,10 +889,7 @@ func TestFilterUintptr(t *testing.T) {
 func ExampleFilterInt() {
 	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	keep := func(x int) bool {
-		if x%2 == 0 {
-			return true
-		}
-		return false
+		return x%2 == 0
 	}
 	a = FilterInt(a, keep)
 	fmt.Println(a)
