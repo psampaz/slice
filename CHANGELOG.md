@@ -6,3 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ## [UNRELEASED] XXXX-XX-XX
 ### Added
 - Min operation
+- Max operation
+- Contains operation
+- Deduplicate operation

@@ -15,36 +15,61 @@ Type-safe functions for common Go slice operations.
 
 \- = Not yet implemented
 
-|            | Min | Max | Contains | Reverse | Shuffle | Clone | Deduplicate | Insert | Delete |
-| ---------- | --- | --- | -------- | ------- | ------- | ----- | ----------- | ------ | ------ |
-| bool       | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
-| byte       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| complex64  | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
-| complex128 | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
-| float32    | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| float64    | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| int        | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| int8       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| int16      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| int32      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| int64      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| rune       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| string     | ✕   | -   | -        | -       | -       | -     | -           | -      | -      |
-| uint       | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| uint8      | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| uint16     | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| uint32     | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| uint64     | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
-| uintptr    | ✔   | -   | -        | -       | -       | -     | -           | -      | -      |
+|            | bool | byte | complex64/128 | float32/64 | int/8/16/32/64 | string | uint/8/16/32/64 | uintptr |
+| ---------- | ---- | ---- | ------------- | ---------- | -------------- | ------ | --------------- | ------- |
+| Batch      | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Contains   | ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       | 
+| Copy       | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Cut        | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Deduplicate| ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       | 
+| Delete     | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Filter     | -    | -    | -             | -          | -              | -      | -               | -       |
+| Insert     | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Max        | ✕    | ✔    | ✕             | ✔          | ✔              | ✕      | ✔               | ✔       |
+| Min        | ✕    | ✔    | ✕             | ✔          | ✔              | ✕      | ✔               | ✔       |
+| Pop        | -    | -    | -             | -          | -              | -      | -               | -       |
+| Push       | -    | -    | -             | -          | -              | -      | -               | -       |
+| Reverse    | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Shift      | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Shuffle    | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Sum        | -    | -    | -             | -          | -              | -      | -               | -       | 
+| Unshift    | -    | -    | -             | -          | -              | -      | -               | -       | 
+
+
 
 # Examples
+
+## Deduplicate
+
+Deduplicate performs order preserving, in place deduplication of a slice
+```go
+    a := []int{1, 2, 3, 2, 5, 3}
+    a = slice.DeduplicateInt(a) // [1, 2, 3, 5]
+```
+
+## Contains
+
+Contains checks if a specific value exists in a slice.
+```go
+    a := []int{"a","b","c","d"}
+    b := "c"
+    exists := slice.Contains(a, "c") // true
+```
+
+## Max
+
+Max returns the maximum value of a slice or an error in case of a nil or empty slice.
+```go
+    a := []int{1, 2, 3, 0, 4, 5}
+    max, err := slice.MaxInt(a) // 5, nil
+```
 
 ## Min
 
 Min returns the minimum value of a slice or an error in case of a nil or empty slice.
 ```go
     a := []int{1, 2, 3, 0, 4, 5}
-    min, err := slice.MinInt(a)
+    min, err := slice.MinInt(a) // 0, nil
 ```
 
 # Contributing
