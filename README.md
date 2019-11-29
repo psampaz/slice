@@ -61,7 +61,7 @@ Filter performs in place filtering of a slice based on a predicate
     keep := func(x int) bool {
         return x%2 == 0 
     }
-    a = slice.Filter(a, keep) // [2, 4, 6, 8 , 10]
+    a = slice.Filter(a, keep) // [2, 4, 6, 8, 10]
 ```
 
 ## slice.Max
