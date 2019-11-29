@@ -47,12 +47,11 @@ Deduplicate performs order preserving, in place deduplication of a slice
     a = slice.DeduplicateInt(a) // [1, 2, 3, 5]
 ```
 
-## Contains
+## slice.Contains
 
 Contains checks if a specific value exists in a slice.
 ```go
     a := []int{"a","b","c","d"}
-    b := "c"
     exists := slice.Contains(a, "c") // true
 ```
 
@@ -70,7 +69,7 @@ Filter performs in place filtering of a slice based on a predicate
     a = slice.Filter(a, keep) // [2, 4, 6, 8 , 10]
 ```
 
-## Max
+## slice.Max
 
 Max returns the maximum value of a slice or an error in case of a nil or empty slice.
 ```go
@@ -78,7 +77,7 @@ Max returns the maximum value of a slice or an error in case of a nil or empty s
     max, err := slice.MaxInt(a) // 5, nil
 ```
 
-## Min
+## slice.Min
 
 Min returns the minimum value of a slice or an error in case of a nil or empty slice.
 ```go
