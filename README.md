@@ -59,10 +59,7 @@ Filter performs in place filtering of a slice based on a predicate
 ```go
     a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     keep := func(x int) bool {
-        if x%2 == 0 {
-            return true
-        }
-        return false
+        return x%2 == 0 
     }
     a = slice.Filter(a, keep) // [2, 4, 6, 8 , 10]
 ```
