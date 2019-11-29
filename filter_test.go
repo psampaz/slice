@@ -98,103 +98,97 @@ func TestFilterByte(t *testing.T) {
 	}
 }
 
-// func TestFilterComplex128(t *testing.T) {
-// 	type args struct {
-// 		a    []complex128
-// 		keep func(x complex128) bool
-// 	}
-// 	tests := []struct {
-// 		name string
-// 		args args
-// 		want []complex128
-// 	}{
-// 		{
-// 			name: "nil slice",
-// 			args: args{
-// 				a:    nil,
-// 				keep: func(complex128) bool { panic("not implemented") },
-// 			},
-// 			want: nil,
-// 		},
-// 		{
-// 			name: "empty slice",
-// 			args: args{
-// 				a:    []complex128{},
-// 				keep: func(complex128) bool { panic("not implemented") },
-// 			},
-// 			want: nil,
-// 		},
-// 		{
-// 			name: "non empty slice",
-// 			args: args{
-// 				a: []complex128{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-// 				keep: func(x complex128) bool {
-// 					if x < 5 {
-// 						return true
-// 					}
-// 					return false
-// 				},
-// 			},
-// 			want: []complex128{1, 2, 3, 4},
-// 		},
-// 	}
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			if got := FilterComplex128(tt.args.a, tt.args.keep); !reflect.DeepEqual(got, tt.want) {
-// 				t.Errorf("FilterComplex128() = %v, want %v", got, tt.want)
-// 			}
-// 		})
-// 	}
-// }
+func TestFilterComplex128(t *testing.T) {
+	type args struct {
+		a    []complex128
+		keep func(x complex128) bool
+	}
+	tests := []struct {
+		name string
+		args args
+		want []complex128
+	}{
+		{
+			name: "nil slice",
+			args: args{
+				a:    nil,
+				keep: func(complex128) bool { panic("not implemented") },
+			},
+			want: nil,
+		},
+		{
+			name: "empty slice",
+			args: args{
+				a:    []complex128{},
+				keep: func(complex128) bool { panic("not implemented") },
+			},
+			want: []complex128{},
+		},
+		{
+			name: "non empty slice",
+			args: args{
+				a: []complex128{complex(1, 1), complex(2, 2), complex(3, 3), complex(4, 4)},
+				keep: func(x complex128) bool {
+					return real(x) < 3
+				},
+			},
+			want: []complex128{complex(1, 1), complex(2, 2)},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := FilterComplex128(tt.args.a, tt.args.keep); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FilterComplex128() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
 
-// func TestFilterComplex64(t *testing.T) {
-// 	type args struct {
-// 		a    []complex64
-// 		keep func(x complex64) bool
-// 	}
-// 	tests := []struct {
-// 		name string
-// 		args args
-// 		want []complex64
-// 	}{
-// 		{
-// 			name: "nil slice",
-// 			args: args{
-// 				a:    nil,
-// 				keep: func(complex64) bool { panic("not implemented") },
-// 			},
-// 			want: nil,
-// 		},
-// 		{
-// 			name: "empty slice",
-// 			args: args{
-// 				a:    []complex64{},
-// 				keep: func(complex64) bool { panic("not implemented") },
-// 			},
-// 			want: nil,
-// 		},
-// 		{
-// 			name: "non empty slice",
-// 			args: args{
-// 				a: []complex64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-// 				keep: func(x complex64) bool {
-// 					if x < 5 {
-// 						return true
-// 					}
-// 					return false
-// 				},
-// 			},
-// 			want: []complex64{1, 2, 3, 4},
-// 		},
-// 	}
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			if got := FilterComplex64(tt.args.a, tt.args.keep); !reflect.DeepEqual(got, tt.want) {
-// 				t.Errorf("FilterComplex64() = %v, want %v", got, tt.want)
-// 			}
-// 		})
-// 	}
-// }
+func TestFilterComplex64(t *testing.T) {
+	type args struct {
+		a    []complex64
+		keep func(x complex64) bool
+	}
+	tests := []struct {
+		name string
+		args args
+		want []complex64
+	}{
+		{
+			name: "nil slice",
+			args: args{
+				a:    nil,
+				keep: func(complex64) bool { panic("not implemented") },
+			},
+			want: nil,
+		},
+		{
+			name: "empty slice",
+			args: args{
+				a:    []complex64{},
+				keep: func(complex64) bool { panic("not implemented") },
+			},
+			want: []complex64{},
+		},
+		{
+			name: "non empty slice",
+			args: args{
+				a: []complex64{complex(1, 1), complex(2, 2), complex(3, 3), complex(4, 4)},
+				keep: func(x complex64) bool {
+					return real(x) < 3
+				},
+			},
+			want: []complex64{complex(1, 1), complex(2, 2)},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := FilterComplex64(tt.args.a, tt.args.keep); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("FilterComplex64() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
 
 func TestFilterFloat32(t *testing.T) {
 	type args struct {
