@@ -15,31 +15,29 @@ Type-safe functions for common Go slice operations.
 
 \- = Not yet implemented
 
-|            | bool | byte | complex64/128 | float32/64 | int/8/16/32/64 | string | uint/8/16/32/64 | uintptr |
-| ---------- | ---- | ---- | ------------- | ---------- | -------------- | ------ | --------------- | ------- |
-| Batch      | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Contains   | ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       | 
-| Copy       | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Cut        | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Deduplicate| ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       | 
-| Delete     | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Filter     | ✔    | ✔    | ✔             | ✔          | ✔              | ✔      | ✔               | ✔       |
-| Insert     | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Max        | ✕    | ✔    | ✕             | ✔          | ✔              | ✕      | ✔               | ✔       |
-| Min        | ✕    | ✔    | ✕             | ✔          | ✔              | ✕      | ✔               | ✔       |
-| Pop        | -    | -    | -             | -          | -              | -      | -               | -       |
-| Push       | -    | -    | -             | -          | -              | -      | -               | -       |
-| Reverse    | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Shift      | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Shuffle    | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Sum        | -    | -    | -             | -          | -              | -      | -               | -       | 
-| Unshift    | -    | -    | -             | -          | -              | -      | -               | -       | 
-
-
+|            | bool | byte | complex(all) | float(all) | int(all) | string | uint(all) | uintptr |
+| ---------- | ---- | ---- | ------------ | ---------- | -------- | ------ | --------- | ------- |
+| Batch      | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Contains   | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Copy       | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Cut        | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Deduplicate| ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Delete     | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Filter     | -    | -    | -            | -          | -        | -      | -         | -       |
+| Insert     | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Max        | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
+| Min        | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
+| Pop        | -    | -    | -            | -          | -        | -      | -         | -       |
+| Push       | -    | -    | -            | -          | -        | -      | -         | -       |
+| Reverse    | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Shift      | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Shuffle    | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Sum        | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Unshift    | -    | -    | -            | -          | -        | -      | -         | -       | 
 
 # Examples
 
-## Deduplicate
+## slice.Deduplicate
 
 Deduplicate performs order preserving, in place deduplication of a slice
 ```go
