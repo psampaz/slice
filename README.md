@@ -29,7 +29,7 @@ Type-safe functions for common Go slice operations.
 | Min        | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
 | Pop        | -    | -    | -            | -          | -        | -      | -         | -       |
 | Push       | -    | -    | -            | -          | -        | -      | -         | -       |
-| Reverse    | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Reverse    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Shift      | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Shuffle    | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Sum        | -    | -    | -            | -          | -        | -      | -         | -       | 
