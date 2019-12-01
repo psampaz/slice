@@ -171,7 +171,7 @@ golangci.com runs on all PRs. Code is checked with golint, go vet, gofmt, plus 2
 2. If the operation is approved to be included in the library, create a small PR the implementation and test for only only type. 
 3. After code review you can proceed the implementation for the rest types. This is necessary because if you submit a PR with the implementation and test for all types, a small correction during review could eventually lead to a big refactor due to code duplication.
 
-## Using Genny for fast implementation of an operation for all types (Optional)
+## Using Genny for fast implementation of all types of an operation (Optional)
 
 The following steps are an example of how to use [https://github.com/cheekybits/genny](Genny) to implement the min operation:
 
