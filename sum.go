@@ -4,11 +4,11 @@ import "errors"
 
 // SumByte returns the sum of the values of a byte Slice or an error in case of a nil or empty slice
 func SumByte(a []byte) (byte, error) {
+	var sum byte
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum byte
 	for k := range a {
 		sum += a[k]
 	}
@@ -18,11 +18,11 @@ func SumByte(a []byte) (byte, error) {
 
 // SumComplex128 returns the sum of the values of a complex128 Slice or an error in case of a nil or empty slice
 func SumComplex128(a []complex128) (complex128, error) {
+	var sum complex128
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum complex128
 	for k := range a {
 		sum += a[k]
 	}
@@ -32,11 +32,11 @@ func SumComplex128(a []complex128) (complex128, error) {
 
 // SumComplex64 returns the sum of the values of a complex64 Slice or an error in case of a nil or empty slice
 func SumComplex64(a []complex64) (complex64, error) {
+	var sum complex64
 	if len(a) == 0 {
-		return complex(0, 0), errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum complex64
 	for k := range a {
 		sum += a[k]
 	}
@@ -46,11 +46,11 @@ func SumComplex64(a []complex64) (complex64, error) {
 
 // SumFloat32 returns the sum of the values of a float32 Slice or an error in case of a nil or empty slice
 func SumFloat32(a []float32) (float32, error) {
+	var sum float32
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum float32
 	for k := range a {
 		sum += a[k]
 	}
@@ -60,11 +60,11 @@ func SumFloat32(a []float32) (float32, error) {
 
 // SumFloat64 returns the sum of the values of a float64 Slice or an error in case of a nil or empty slice
 func SumFloat64(a []float64) (float64, error) {
+	var sum float64
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum float64
 	for k := range a {
 		sum += a[k]
 	}
@@ -74,11 +74,11 @@ func SumFloat64(a []float64) (float64, error) {
 
 // SumInt returns the sum of the values of a int Slice or an error in case of a nil or empty slice
 func SumInt(a []int) (int, error) {
+	var sum int
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum int
 	for k := range a {
 		sum += a[k]
 	}
@@ -88,11 +88,11 @@ func SumInt(a []int) (int, error) {
 
 // SumInt16 returns the sum of the values of a int16 Slice or an error in case of a nil or empty slice
 func SumInt16(a []int16) (int16, error) {
+	var sum int16
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum int16
 	for k := range a {
 		sum += a[k]
 	}
@@ -102,11 +102,11 @@ func SumInt16(a []int16) (int16, error) {
 
 // SumInt32 returns the sum of the values of a int32 Slice or an error in case of a nil or empty slice
 func SumInt32(a []int32) (int32, error) {
+	var sum int32
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum int32
 	for k := range a {
 		sum += a[k]
 	}
@@ -116,11 +116,11 @@ func SumInt32(a []int32) (int32, error) {
 
 // SumInt64 returns the sum of the values of a int64 Slice or an error in case of a nil or empty slice
 func SumInt64(a []int64) (int64, error) {
+	var sum int64
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum int64
 	for k := range a {
 		sum += a[k]
 	}
@@ -130,11 +130,11 @@ func SumInt64(a []int64) (int64, error) {
 
 // SumInt8 returns the sum of the values of a int8 Slice or an error in case of a nil or empty slice
 func SumInt8(a []int8) (int8, error) {
+	var sum int8
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum int8
 	for k := range a {
 		sum += a[k]
 	}
@@ -144,11 +144,11 @@ func SumInt8(a []int8) (int8, error) {
 
 // SumRune returns the sum of the values of a rune Slice or an error in case of a nil or empty slice
 func SumRune(a []rune) (rune, error) {
+	var sum rune
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum rune
 	for k := range a {
 		sum += a[k]
 	}
@@ -158,11 +158,11 @@ func SumRune(a []rune) (rune, error) {
 
 // SumUint returns the sum of the values of a uint Slice or an error in case of a nil or empty slice
 func SumUint(a []uint) (uint, error) {
+	var sum uint
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum uint
 	for k := range a {
 		sum += a[k]
 	}
@@ -172,11 +172,11 @@ func SumUint(a []uint) (uint, error) {
 
 // SumUint16 returns the sum of the values of a uint16 Slice or an error in case of a nil or empty slice
 func SumUint16(a []uint16) (uint16, error) {
+	var sum uint16
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum uint16
 	for k := range a {
 		sum += a[k]
 	}
@@ -186,11 +186,11 @@ func SumUint16(a []uint16) (uint16, error) {
 
 // SumUint32 returns the sum of the values of a uint32 Slice or an error in case of a nil or empty slice
 func SumUint32(a []uint32) (uint32, error) {
+	var sum uint32
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum uint32
 	for k := range a {
 		sum += a[k]
 	}
@@ -200,11 +200,11 @@ func SumUint32(a []uint32) (uint32, error) {
 
 // SumUint64 returns the sum of the values of a uint64 Slice or an error in case of a nil or empty slice
 func SumUint64(a []uint64) (uint64, error) {
+	var sum uint64
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum uint64
 	for k := range a {
 		sum += a[k]
 	}
@@ -214,11 +214,11 @@ func SumUint64(a []uint64) (uint64, error) {
 
 // SumUint8 returns the sum of the values of a uint8 Slice or an error in case of a nil or empty slice
 func SumUint8(a []uint8) (uint8, error) {
+	var sum uint8
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum uint8
 	for k := range a {
 		sum += a[k]
 	}
@@ -228,11 +228,11 @@ func SumUint8(a []uint8) (uint8, error) {
 
 // SumUintptr returns the sum of the values of a uintptr Slice or an error in case of a nil or empty slice
 func SumUintptr(a []uintptr) (uintptr, error) {
+	var sum uintptr
 	if len(a) == 0 {
-		return 0, errors.New("Cannot calculate the sum of a nil or empty slice")
+		return sum, errors.New("Cannot calculate the sum of a nil or empty slice")
 	}
 
-	var sum uintptr
 	for k := range a {
 		sum += a[k]
 	}
