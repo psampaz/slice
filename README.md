@@ -97,10 +97,6 @@ Sum returns the sum of the values of a slice or an error in case of a nil or emp
     sum, err := slice.Sum(a) // 6, nil
 ```
 
-# Contributing
-
-You are very welcome to contribute new operations of bug fixes in this library.
-
 # Tests
 
 if you want to run the test suite for this library:
@@ -115,6 +111,9 @@ $ go test -v -cover
 - Genny (https://github.com/cheekybits/genny). In order to speedup the development and avoid massive copy paste, the excellent Genny library was used.
 
 # Contributing
+
+You are very welcome to contribute new operations or bug fixes in this library.
+
 ## Contribution guidelines (code)
 
 1. Use only functions. This is a function based library so struct based operations will not be accepted, in order to preserve simplicity and consistency.
