@@ -32,7 +32,7 @@ Type-safe functions for common Go slice operations.
 | Reverse    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Shift      | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Shuffle    | -    | -    | -            | -          | -        | -      | -         | -       | 
-| Sum        | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Sum        | ✕    | ✔    | ✔            | ✔          | ✔        | ✕      | ✔         | ✔       | 
 | Unshift    | -    | -    | -            | -          | -        | -      | -         | -       | 
 
 # Examples
@@ -86,6 +86,15 @@ Reverse performs in place reversal of a slice
 ```go
     a := []int{1, 2, 3, 4, 5}
     a = slice.ReverseInt(a) // [5, 4, 3, 2, 1]
+```
+
+## slice.Sum
+
+Sum returns the sum of the values of a slice or an error in case of a nil or empty slice
+
+```go
+    a := []int{1, 2, 3}
+    sum, err := slice.Sum(a) // 6, nil
 ```
 
 # Contributing
