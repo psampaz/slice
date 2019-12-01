@@ -101,7 +101,7 @@ Sum returns the sum of the values of a slice or an error in case of a nil or emp
 
 You are very welcome to contribute new operations of bug fixes in this library.
 
-# Test
+# Tests
 
 if you want to run the test suite for this library:
 
