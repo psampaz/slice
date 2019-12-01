@@ -336,3 +336,5 @@ The following steps are an example of how to use [https://github.com/cheekybits/
 
 8. Adjust the tests for each one of the types.
 
+9. Delete min_genny.go and min_genny_test.go
+
