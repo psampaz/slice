@@ -29,7 +29,7 @@ Type-safe functions for common Go slice operations.
 | Min        | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
 | Pop        | -    | -    | -            | -          | -        | -      | -         | -       |
 | Push       | -    | -    | -            | -          | -        | -      | -         | -       |
-| Reverse    | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Reverse    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Shift      | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Shuffle    | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Sum        | -    | -    | -            | -          | -        | -      | -         | -       | 
@@ -78,6 +78,14 @@ Min returns the minimum value of a slice or an error in case of a nil or empty s
 ```go
     a := []int{1, 2, 3, 0, 4, 5}
     min, err := slice.MinInt(a) // 0, nil
+```
+
+## slice.Reverse
+
+Reverse performs in place reversal of a slice
+```go
+    a := []int{1, 2, 3, 4, 5}
+    a = slice.ReverseInt(a) // [5, 4, 3, 2, 1]
 ```
 
 # Contributing
