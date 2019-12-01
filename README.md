@@ -164,7 +164,7 @@ $ go test -v -cover
 
 ## Static code analysis    
 
-golangci.com run on all PRs. Code is checked with golint, go vet, gofmt, plus 20+ linters, and review comments will be automatically added in your PR in case of a failure. You can see the whole list of linters here: https://golangci.com/product#linters
+golangci.com runs on all PRs. Code is checked with golint, go vet, gofmt, plus 20+ linters, and review comments will be automatically added in your PR in case of a failure. You can see the whole list of linters here: https://golangci.com/product#linters
 
 ## Steps for contributing new operations
 
@@ -330,7 +330,7 @@ The following steps are an example of how to use [https://github.com/cheekybits/
     cat min_genny_test.go | genny gen Type=BUILTINS > min_test.go
     ```
 
-    This step will generate a file min_test.go with test for each one of Go's built in types.
+    This step will generate a file min_test.go with tests for each one of Go's built in types.
 
 7. Remove tests for non applicable types.
 
