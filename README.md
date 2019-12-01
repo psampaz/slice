@@ -121,7 +121,7 @@ $ go test -v -cover
 
 2. If the operation is not working on a nil or empty slice, then the function should return an error.
 
-3. If the operation accepts slice indexes as parameters, then the function should guard against out of bound index value and return an error in that case. Example:
+3. If the operation accepts slice indexes as parameters, then the function should guard against out of bound index values and return an error in that case.
 
 4. All operations should be in place operations, meaning that they should alter the original slice. 
 
@@ -168,7 +168,7 @@ golangci.com run on all PRs. Code is checked with golint, go vet, gofmt, plus 20
 
 ## Steps for contributing new operations
 
-1. Open an issue and fill the issue template
+1. Open an issue describing the new operation, the proposed name and the applicable types.
 2. If the operation is approved to be included in the library, create a small PR the implementation and test for only only type. 
 3. After code review you can proceed the implementation for the rest types. This is necessary because if you submit a PR with the implementation and test for all types, a small correction during review could eventually lead to a big refactor due to code duplication.
 
@@ -324,10 +324,15 @@ The following steps are an example of how to use [https://github.com/cheekybits/
 
     ```
 
-    6. Use genny to generate tests for all Go's built in types:
+6. Use genny to generate tests for all Go's built in types:
 
     ```
     cat min_genny_test.go | genny gen Type=BUILTINS > min_test.go
     ```
 
-    This step will generate a file min_test.go with the following content:
+    This step will generate a file min_test.go with test for each one of Go's built in types.
+
+7. Remove tests for non applicable types.
+
+8. Adjust the tests for each one of the types.
+
