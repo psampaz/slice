@@ -1,6 +1,7 @@
 package slice
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -83,9 +84,9 @@ func TestSumComplex128(t *testing.T) {
 		{
 			name: "non empty slice",
 			args: args{
-				a: []complex128{complex(1,1), complex(2,2), complex(3,3)},
+				a: []complex128{complex(1, 1), complex(2, 2), complex(3, 3)},
 			},
-			want:    complex(6,6),
+			want:    complex(6, 6),
 			wantErr: false,
 		},
 	}
@@ -132,9 +133,9 @@ func TestSumComplex64(t *testing.T) {
 		{
 			name: "non empty slice",
 			args: args{
-				a: []complex64{complex(1,1), complex(2,2), complex(3,3)},
+				a: []complex64{complex(1, 1), complex(2, 2), complex(3, 3)},
 			},
-			want:    complex(6,6),
+			want:    complex(6, 6),
 			wantErr: false,
 		},
 	}
@@ -836,4 +837,11 @@ func TestSumUintptr(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleSumInt() {
+	a := []int{1, 2, 3}
+	sum, err := SumInt(a)
+	fmt.Printf("%d, %v", sum, err)
+	// Output: 6, <nil>
 }
