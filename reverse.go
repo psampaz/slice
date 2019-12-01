@@ -1,6 +1,6 @@
 package slice
 
-// ReverseBool reverses a bool slice
+// ReverseBool performs in place reversal of a bool slice
 func ReverseBool(a []bool) []bool {
 	if len(a) == 0 {
 		return a
@@ -16,7 +16,7 @@ func ReverseBool(a []bool) []bool {
 	return a
 }
 
-// ReverseByte reverses a byte slice
+// ReverseByte performs in place reversal of a byte slice
 func ReverseByte(a []byte) []byte {
 	if len(a) == 0 {
 		return a
@@ -32,7 +32,7 @@ func ReverseByte(a []byte) []byte {
 	return a
 }
 
-// ReverseComplex128 reverses a complex128 slice
+// ReverseComplex128 performs in place reversal of a complex128 slice
 func ReverseComplex128(a []complex128) []complex128 {
 	if len(a) == 0 {
 		return a
@@ -48,7 +48,7 @@ func ReverseComplex128(a []complex128) []complex128 {
 	return a
 }
 
-// ReverseComplex64 reverses a complex64 slice
+// ReverseComplex64 performs in place reversal of a complex64 slice
 func ReverseComplex64(a []complex64) []complex64 {
 	if len(a) == 0 {
 		return a
@@ -64,7 +64,7 @@ func ReverseComplex64(a []complex64) []complex64 {
 	return a
 }
 
-// ReverseFloat32 reverses a float32 slice
+// ReverseFloat32 performs in place reversal of a float32 slice
 func ReverseFloat32(a []float32) []float32 {
 	if len(a) == 0 {
 		return a
@@ -80,7 +80,7 @@ func ReverseFloat32(a []float32) []float32 {
 	return a
 }
 
-// ReverseFloat64 reverses a float64 slice
+// ReverseFloat64 performs in place reversal of a float64 slice
 func ReverseFloat64(a []float64) []float64 {
 	if len(a) == 0 {
 		return a
@@ -96,7 +96,7 @@ func ReverseFloat64(a []float64) []float64 {
 	return a
 }
 
-// ReverseInt reverses a int slice
+// ReverseInt performs in place reversal of an int slice
 func ReverseInt(a []int) []int {
 	if len(a) == 0 {
 		return a
@@ -112,7 +112,7 @@ func ReverseInt(a []int) []int {
 	return a
 }
 
-// ReverseInt16 reverses a int16 slice
+// ReverseInt16 performs in place reversal of an int16 slice
 func ReverseInt16(a []int16) []int16 {
 	if len(a) == 0 {
 		return a
@@ -128,7 +128,7 @@ func ReverseInt16(a []int16) []int16 {
 	return a
 }
 
-// ReverseInt32 reverses a int32 slice
+// ReverseInt32 performs in place reversal of an int32 slice
 func ReverseInt32(a []int32) []int32 {
 	if len(a) == 0 {
 		return a
@@ -144,7 +144,7 @@ func ReverseInt32(a []int32) []int32 {
 	return a
 }
 
-// ReverseInt64 reverses a int64 slice
+// ReverseInt64 performs in place reversal of an int64 slice
 func ReverseInt64(a []int64) []int64 {
 	if len(a) == 0 {
 		return a
@@ -160,7 +160,7 @@ func ReverseInt64(a []int64) []int64 {
 	return a
 }
 
-// ReverseInt8 reverses a int8 slice
+// ReverseInt8 performs in place reversal of an int8 slice
 func ReverseInt8(a []int8) []int8 {
 	if len(a) == 0 {
 		return a
@@ -176,7 +176,7 @@ func ReverseInt8(a []int8) []int8 {
 	return a
 }
 
-// ReverseRune reverses a rune slice
+// ReverseRune performs in place reversal of a rune slice
 func ReverseRune(a []rune) []rune {
 	if len(a) == 0 {
 		return a
@@ -192,7 +192,7 @@ func ReverseRune(a []rune) []rune {
 	return a
 }
 
-// ReverseString reverses a string slice
+// ReverseString performs in place reversal of a string slice
 func ReverseString(a []string) []string {
 	if len(a) == 0 {
 		return a
@@ -208,7 +208,7 @@ func ReverseString(a []string) []string {
 	return a
 }
 
-// ReverseUint reverses a uint slice
+// ReverseUint performs in place reversal of a uint slice
 func ReverseUint(a []uint) []uint {
 	if len(a) == 0 {
 		return a
@@ -224,7 +224,7 @@ func ReverseUint(a []uint) []uint {
 	return a
 }
 
-// ReverseUint16 reverses a uint16 slice
+// ReverseUint16 performs in place reversal of a uint16 slice
 func ReverseUint16(a []uint16) []uint16 {
 	if len(a) == 0 {
 		return a
@@ -240,7 +240,7 @@ func ReverseUint16(a []uint16) []uint16 {
 	return a
 }
 
-// ReverseUint32 reverses a uint32 slice
+// ReverseUint32 performs in place reversal of a uint32 slice
 func ReverseUint32(a []uint32) []uint32 {
 	if len(a) == 0 {
 		return a
@@ -256,7 +256,7 @@ func ReverseUint32(a []uint32) []uint32 {
 	return a
 }
 
-// ReverseUint64 reverses a uint64 slice
+// ReverseUint64 performs in place reversal of a uint64 slice
 func ReverseUint64(a []uint64) []uint64 {
 	if len(a) == 0 {
 		return a
@@ -272,7 +272,7 @@ func ReverseUint64(a []uint64) []uint64 {
 	return a
 }
 
-// ReverseUint8 reverses a uint8 slice
+// ReverseUint8 performs in place reversal of a uint8 slice
 func ReverseUint8(a []uint8) []uint8 {
 	if len(a) == 0 {
 		return a
@@ -288,7 +288,7 @@ func ReverseUint8(a []uint8) []uint8 {
 	return a
 }
 
-// ReverseUintptr reverses a uintptr slice
+// ReverseUintptr performs in place reversal of a uintptr slice
 func ReverseUintptr(a []uintptr) []uintptr {
 	if len(a) == 0 {
 		return a
