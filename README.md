@@ -55,9 +55,9 @@ Contains checks if a specific value exists in a slice.
 
 ## slice.Copy
 
-// CopyBool creates a copy of a bool slice.
-// The resulting slice has the same elements as the original but the underlying array is different.
-// See https://github.com/go101/go101/wiki
+CopyBool creates a copy of a bool slice.
+The resulting slice has the same elements as the original but the underlying array is different.
+See https://github.com/go101/go101/wiki
 ```go
     a := []int{1, 2, 3, 4}
     b := slice.CopyInt(a) // [1, 2, 3, 4]
