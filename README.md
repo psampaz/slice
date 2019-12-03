@@ -6,6 +6,11 @@
 
 Type-safe functions for common Go slice operations.
 
+# Installation
+
+```
+go get github.com/psampaz/slice
+```
 
 # Operations 
 
