@@ -54,14 +54,14 @@ func TestShuffleBool_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleBool(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleBool() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return !shuffled[i] // this will put "false" first and "true" after
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleBool() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -113,14 +113,14 @@ func TestShuffleByte_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleByte(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleByte() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleByte() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -172,14 +172,14 @@ func TestShuffleComplex128_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleComplex128(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleComplex128() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return real(shuffled[i]) < real(shuffled[j])
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleComplex128() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -231,14 +231,14 @@ func TestShuffleComplex64_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleComplex64(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleComplex64() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return real(shuffled[i]) < real(shuffled[j])
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleComplex64() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -290,14 +290,14 @@ func TestShuffleFloat32_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleFloat32(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleFloat32() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleFloat32() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -349,14 +349,14 @@ func TestShuffleFloat64_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleFloat64(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleFloat64() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleFloat64() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -408,14 +408,14 @@ func TestShuffleInt_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleInt(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleInt() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleInt() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -467,14 +467,14 @@ func TestShuffleInt16_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleInt16(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleInt16() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleInt16() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -526,14 +526,14 @@ func TestShuffleInt32_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleInt32(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleInt32() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleInt32() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -585,14 +585,14 @@ func TestShuffleInt64_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleInt64(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleInt64() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleInt64() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -644,14 +644,14 @@ func TestShuffleInt8_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleInt8(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleInt8() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleInt8() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -703,14 +703,14 @@ func TestShuffleRune_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleRune(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleRune() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleRune() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -762,14 +762,14 @@ func TestShuffleString_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleString(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleString() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleString() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -821,14 +821,14 @@ func TestShuffleUint_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleUint(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleUint() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleUint() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -880,14 +880,14 @@ func TestShuffleUint16_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleUint16(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleUint16() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleUint16() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -939,14 +939,14 @@ func TestShuffleUint32_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleUint32(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleUint32() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleUint32() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -998,14 +998,14 @@ func TestShuffleUint64_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleUint64(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleUint64() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleUint64() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -1057,14 +1057,14 @@ func TestShuffleUint8_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleUint8(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleUint8() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleUint8() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
 
@@ -1116,13 +1116,13 @@ func TestShuffleUintptr_MoreThan2Elements(t *testing.T) {
 	original := append(a[:0:0], a...)
 	shuffled := ShuffleUintptr(a)
 	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should not match the original", shuffled)
+		t.Errorf("ShuffleUintptr() = %v, Shuffled slice should not match the original", shuffled)
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
 		return shuffled[i] < shuffled[j]
 	})
 	if !reflect.DeepEqual(shuffled, original) {
-		t.Errorf("IntShuffle() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
+		t.Errorf("ShuffleUintptr() = %v, Shuffled slice should have the same elements with the original %v", shuffled, original)
 	}
 }
