@@ -756,7 +756,7 @@ func TestShuffleString_LessThan2Elements(t *testing.T) {
 
 func TestShuffleString_MoreThan2Elements(t *testing.T) {
 	// start with a sorted slice
-	a := []string{"a", "b", "c"}
+	a := []string{"a", "b", "c", "d", "e", "f"}
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
