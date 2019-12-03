@@ -49,8 +49,8 @@ Deduplicate performs order preserving, in place deduplication of a slice
 
 Contains checks if a specific value exists in a slice.
 ```go
-    a := []int{"a","b","c","d"}
-    exists := slice.Contains(a, "c") // true
+    a := []int{1, 2, 3, 4, 5}
+    exists := slice.ContainsInt(a, 3) // true
 ```
 
 ## slice.Filter
@@ -61,7 +61,7 @@ Filter performs in place filtering of a slice based on a predicate
     keep := func(x int) bool {
         return x%2 == 0 
     }
-    a = slice.Filter(a, keep) // [2, 4, 6, 8, 10]
+    a = slice.FilterInt(a, keep) // [2, 4, 6, 8, 10]
 ```
 
 ## slice.Max
@@ -94,7 +94,7 @@ Sum returns the sum of the values of a slice or an error in case of a nil or emp
 
 ```go
     a := []int{1, 2, 3}
-    sum, err := slice.Sum(a) // 6, nil
+    sum, err := slice.SumInt(a) // 6, nil
 ```
 
 # Tests
