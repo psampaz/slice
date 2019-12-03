@@ -93,7 +93,7 @@ Reverse performs in place reversal of a slice
 Shuffle shuffles (in place) a slice
 ```go
     a := []int{1, 2, 3, 4, 5}
-    a = slice.Shuffle(a) // [3, 5, 1, 4, 2] (random output)
+    a = slice.ShuffleInt(a) // [3, 5, 1, 4, 2] (random output)
  ```
 
 ## slice.Sum
