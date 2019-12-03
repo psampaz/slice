@@ -19,7 +19,7 @@ Type-safe functions for common Go slice operations.
 | ---------- | ---- | ---- | ------------ | ---------- | -------- | ------ | --------- | ------- |
 | Batch      | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Contains   | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Copy       | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Copy       | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Cut        | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Deduplicate| ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Delete     | -    | -    | -            | -          | -        | -      | -         | -       | 
@@ -51,6 +51,16 @@ Contains checks if a specific value exists in a slice.
 ```go
     a := []int{1, 2, 3, 4, 5}
     exists := slice.ContainsInt(a, 3) // true
+```
+
+## slice.Copy
+
+Copy creates a copy of a slice.
+The resulting slice has the same elements as the original but the underlying array is different.
+See https://github.com/go101/go101/wiki
+```go
+    a := []int{1, 2, 3, 4}
+    b := slice.CopyInt(a) // [1, 2, 3, 4]
 ```
 
 ## slice.Filter
