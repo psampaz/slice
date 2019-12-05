@@ -15,7 +15,7 @@ func DeleteBool(a []bool, i int) ([]bool, error) {
 	return append(a[:i], a[i+1:]...), nil
 }
 
-// DeleteByte removes the element at i index of a byte slice. 
+// DeleteByte removes the element at i index of a byte slice.
 // An error is return in case the index is out of bounds or if the slice is nil or empty.
 func DeleteByte(a []byte, i int) ([]byte, error) {
 	if len(a) == 0 {
