@@ -27,7 +27,7 @@ go get github.com/psampaz/slice
 | Copy       | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Cut        | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Deduplicate| ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Delete     | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Delete     | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Filter     | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       |
 | Insert     | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Max        | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
@@ -48,6 +48,14 @@ Deduplicate performs order preserving, in place deduplication of a slice
 ```go
     a := []int{1, 2, 3, 2, 5, 3}
     a = slice.DeduplicateInt(a) // [1, 2, 3, 5]
+```
+
+## slice.Delete
+
+Delete removes at a specified index from a slice. An error is return in case the index is out of bounds or if the slice is nil or empty.
+```go
+    a := []int{1, 2, 3, 4, 5}
+    a, err = slice.DeleteInt(a, 2) // [1, 2, 4, 5], nil
 ```
 
 ## slice.Contains
