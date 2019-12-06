@@ -36,7 +36,7 @@ go get github.com/psampaz/slice
 | Push       | -    | -    | -            | -          | -        | -      | -         | -       |
 | Reverse    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Shift      | -    | -    | -            | -          | -        | -      | -         | -       | 
-| Shuffle    | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Shuffle    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Sum        | ✕    | ✔    | ✔            | ✔          | ✔        | ✕      | ✔         | ✔       | 
 | Unshift    | -    | -    | -            | -          | -        | -      | -         | -       | 
 
@@ -110,6 +110,14 @@ Reverse performs in place reversal of a slice
     a := []int{1, 2, 3, 4, 5}
     a = slice.ReverseInt(a) // [5, 4, 3, 2, 1]
 ```
+
+## slice.Shuffle
+
+Shuffle shuffles (in place) a slice
+```go
+    a := []int{1, 2, 3, 4, 5}
+    a = slice.ShuffleInt(a) // [3, 5, 1, 4, 2] (random output)
+ ```
 
 ## slice.Sum
 
