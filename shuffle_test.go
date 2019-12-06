@@ -52,9 +52,20 @@ func TestShuffleBool_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleBool(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleBool() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]bool, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleBool(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleUintptr(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -111,9 +122,20 @@ func TestShuffleByte_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleByte(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleByte() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]byte, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleByte(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleByte(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -170,9 +192,20 @@ func TestShuffleComplex128_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleComplex128(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleComplex128() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]complex128, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleComplex128(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleComplex128(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -229,9 +262,20 @@ func TestShuffleComplex64_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleComplex64(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleComplex64() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]complex64, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleComplex64(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleComplex64(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -288,9 +332,20 @@ func TestShuffleFloat32_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleFloat32(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleFloat32() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]float32, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleFloat32(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleFloat32(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -406,9 +461,20 @@ func TestShuffleInt_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleInt(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleInt() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]int, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleInt(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleInt(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -465,9 +531,20 @@ func TestShuffleInt16_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleInt16(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleInt16() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]int16, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleInt16(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleInt16(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -524,9 +601,20 @@ func TestShuffleInt32_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleInt32(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleInt32() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]int32, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleInt32(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleInt32(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -583,9 +671,20 @@ func TestShuffleInt64_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleInt64(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleInt64() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]int64, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleInt64(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleInt64(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -642,9 +741,20 @@ func TestShuffleInt8_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleInt8(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleInt8() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]int8, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleInt8(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleInt8(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -701,9 +811,20 @@ func TestShuffleRune_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleRune(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleRune() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]rune, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleRune(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleRune(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -760,9 +881,20 @@ func TestShuffleString_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleString(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleString() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]string, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleString(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleString(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -819,9 +951,20 @@ func TestShuffleUint_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleUint(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleUint() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]uint, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleUint(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleUint(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -878,9 +1021,20 @@ func TestShuffleUint16_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleUint16(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleUint16() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]uint16, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleUint16(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleUint16(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -937,9 +1091,20 @@ func TestShuffleUint32_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleUint32(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleUint32() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]uint32, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleUint32(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleUint32(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -996,9 +1161,20 @@ func TestShuffleUint64_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleUint64(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleUint64() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]uint64, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleUint64(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleUint64(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -1055,9 +1231,20 @@ func TestShuffleUint8_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleUint8(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleUint8() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]uint8, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleUint8(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleUint8(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {
@@ -1114,9 +1301,20 @@ func TestShuffleUintptr_MoreThan2Elements(t *testing.T) {
 
 	// Make sure the shuffled slice elements are in different order that the original slice
 	original := append(a[:0:0], a...)
-	shuffled := ShuffleUintptr(a)
-	if reflect.DeepEqual(shuffled, original) {
-		t.Errorf("ShuffleUintptr() = %v, Shuffled slice should not match the original", shuffled)
+	different := false
+	shuffled := make([]uintptr, len(a))
+	// This is a fragile test because the result of the shuffling might be exactly the same as the original
+	// We run the shuffle 100 until until we get the first correct shuffle.
+	// Todo: find a smarter way to test this
+	for x := 0; x <= 100; x++ {
+		shuffled = ShuffleUintptr(a)
+		if !reflect.DeepEqual(shuffled, original) {
+			different = true
+			break
+		}
+	}
+	if different == false {
+		t.Errorf("ShuffleUintptr(): Shuffled slice should not match the original")
 	}
 	// Sort the shuffled slice in order to ensure that its elements are the same
 	sort.Slice(shuffled, func(i, j int) bool {

@@ -11,7 +11,7 @@ func ShuffleBool(a []bool) []bool {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -24,7 +24,7 @@ func ShuffleByte(a []byte) []byte {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -37,7 +37,7 @@ func ShuffleComplex128(a []complex128) []complex128 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -50,7 +50,7 @@ func ShuffleComplex64(a []complex64) []complex64 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -63,7 +63,7 @@ func ShuffleFloat32(a []float32) []float32 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -76,7 +76,7 @@ func ShuffleFloat64(a []float64) []float64 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -89,7 +89,7 @@ func ShuffleInt(a []int) []int {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -102,7 +102,7 @@ func ShuffleInt16(a []int16) []int16 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -115,7 +115,7 @@ func ShuffleInt32(a []int32) []int32 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -128,7 +128,7 @@ func ShuffleInt64(a []int64) []int64 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -141,7 +141,7 @@ func ShuffleInt8(a []int8) []int8 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -154,7 +154,7 @@ func ShuffleRune(a []rune) []rune {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -167,7 +167,7 @@ func ShuffleString(a []string) []string {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -180,7 +180,7 @@ func ShuffleUint(a []uint) []uint {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -193,7 +193,7 @@ func ShuffleUint16(a []uint16) []uint16 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -206,7 +206,7 @@ func ShuffleUint32(a []uint32) []uint32 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -219,7 +219,7 @@ func ShuffleUint64(a []uint64) []uint64 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -232,7 +232,7 @@ func ShuffleUint8(a []uint8) []uint8 {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
@@ -245,7 +245,7 @@ func ShuffleUintptr(a []uintptr) []uintptr {
 		return a
 	}
 
-	r := rand.New(rand.NewSource(time.Now().Unix()))
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
