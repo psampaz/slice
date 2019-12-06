@@ -15,6 +15,7 @@ func ShuffleBool(a []bool) []bool {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -28,6 +29,7 @@ func ShuffleByte(a []byte) []byte {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -41,6 +43,7 @@ func ShuffleComplex128(a []complex128) []complex128 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -54,6 +57,7 @@ func ShuffleComplex64(a []complex64) []complex64 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -67,6 +71,7 @@ func ShuffleFloat32(a []float32) []float32 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -80,6 +85,7 @@ func ShuffleFloat64(a []float64) []float64 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -93,6 +99,7 @@ func ShuffleInt(a []int) []int {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -106,6 +113,7 @@ func ShuffleInt16(a []int16) []int16 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -119,6 +127,7 @@ func ShuffleInt32(a []int32) []int32 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -132,6 +141,7 @@ func ShuffleInt64(a []int64) []int64 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -145,6 +155,7 @@ func ShuffleInt8(a []int8) []int8 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -158,6 +169,7 @@ func ShuffleRune(a []rune) []rune {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -171,6 +183,7 @@ func ShuffleString(a []string) []string {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -184,6 +197,7 @@ func ShuffleUint(a []uint) []uint {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -197,6 +211,7 @@ func ShuffleUint16(a []uint16) []uint16 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -210,6 +225,7 @@ func ShuffleUint32(a []uint32) []uint32 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -223,6 +239,7 @@ func ShuffleUint64(a []uint64) []uint64 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -236,6 +253,7 @@ func ShuffleUint8(a []uint8) []uint8 {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
 
@@ -249,5 +267,6 @@ func ShuffleUintptr(a []uintptr) []uintptr {
 	r.Shuffle(len(a), func(i, j int) {
 		a[i], a[j] = a[j], a[i]
 	})
+
 	return a
 }
