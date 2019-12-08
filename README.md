@@ -60,7 +60,7 @@ Delete removes an element at a specific index of a slice. An error is return in 
 
 ## slice.DeleteMany
 
-DeleteMany deletes the elements between from and to index (inclusive) from a Type slice. An error is return in case the index is out of bounds or the slice is nil or empty.
+DeleteMany deletes the elements between from and to index (inclusive) from a slice. An error is return in case the index is out of bounds or the slice is nil or empty.
 ```go
     a := []int{1, 2, 3, 4, 5}
     a, err = slice.DeleteManyInt(a, 2, 3) // [1, 2, 5], nil
