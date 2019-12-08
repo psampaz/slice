@@ -7,8 +7,8 @@ import (
 
 type Type generic.Type
 
-// CutType deletes all elements between from and to index (inclusive), from a Type slice
-func CutType(a []Type, from, to Type) ([]Type, error) {
+// DeleteManyType deletes the elements between from and to index (inclusive) from a Type slice
+func DeleteManyType(a []Type, from, to Type) ([]Type, error) {
 	if len(a) == 0 {
 		return nil, errors.New("Can't cut a nil or empty slice")
 	}
