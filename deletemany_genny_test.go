@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestCutType(t *testing.T) {
+func TestDeleteManyType(t *testing.T) {
 	type args struct {
 		a    []Type
 		from int
