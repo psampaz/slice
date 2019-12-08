@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestDeleteManyType(t *testing.T) {
+func TestDeleteRangeType(t *testing.T) {
 	type args struct {
 		a    []Type
 		from int
@@ -100,13 +100,13 @@ func TestDeleteManyType(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := DeleteManyType(tt.args.a, tt.args.from, tt.args.to)
+			got, err := DeleteRangeType(tt.args.a, tt.args.from, tt.args.to)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("DeleteManyType() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("DeleteRangeType() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("DeleteManyType() = %v, want %v", got, tt.want)
+				t.Errorf("DeleteRangeType() = %v, want %v", got, tt.want)
 			}
 		})
 	}
