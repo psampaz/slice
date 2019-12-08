@@ -1,6 +1,7 @@
 package slice
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -2036,4 +2037,11 @@ func TestDeleteRangeUintptr(t *testing.T) {
 			}
 		})
 	}
+}
+
+func ExampleDeleteRangeInt() {
+	a := []int{1, 2, 3, 4, 5}
+	a, err := DeleteRangeInt(a, 2, 3)
+	fmt.Printf("%v, %v", a, err)
+	// Output: [1 2 5], <nil>
 }
