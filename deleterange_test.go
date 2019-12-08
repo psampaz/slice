@@ -79,7 +79,7 @@ func TestDeleteRangeBool(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []bool{true, false, true},
 				from: 1,
@@ -186,7 +186,7 @@ func TestDeleteRangeByte(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []byte{1, 2, 3},
 				from: 1,
@@ -293,7 +293,7 @@ func TestDeleteRangeComplex128(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []complex128{1, 2, 3},
 				from: 1,
@@ -400,7 +400,7 @@ func TestDeleteRangeComplex64(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []complex64{1, 2, 3},
 				from: 1,
@@ -507,7 +507,7 @@ func TestDeleteRangeFloat32(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []float32{1, 2, 3},
 				from: 1,
@@ -614,7 +614,7 @@ func TestDeleteRangeFloat64(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []float64{1, 2, 3},
 				from: 1,
@@ -721,7 +721,7 @@ func TestDeleteRangeInt(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []int{1, 2, 3},
 				from: 1,
@@ -828,7 +828,7 @@ func TestDeleteRangeInt16(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []int16{1, 2, 3},
 				from: 1,
@@ -935,7 +935,7 @@ func TestDeleteRangeInt32(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []int32{1, 2, 3},
 				from: 1,
@@ -1042,7 +1042,7 @@ func TestDeleteRangeInt64(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []int64{1, 2, 3},
 				from: 1,
@@ -1149,7 +1149,7 @@ func TestDeleteRangeInt8(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []int8{1, 2, 3},
 				from: 1,
@@ -1256,7 +1256,7 @@ func TestDeleteRangeRune(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []rune{1, 2, 3},
 				from: 1,
@@ -1363,7 +1363,7 @@ func TestDeleteRangeString(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []string{"a", "b", "c"},
 				from: 1,
@@ -1470,7 +1470,7 @@ func TestDeleteRangeUint(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []uint{1, 2, 3},
 				from: 1,
@@ -1577,7 +1577,7 @@ func TestDeleteRangeUint16(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []uint16{1, 2, 3},
 				from: 1,
@@ -1684,7 +1684,7 @@ func TestDeleteRangeUint32(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []uint32{1, 2, 3},
 				from: 1,
@@ -1791,7 +1791,7 @@ func TestDeleteRangeUint64(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []uint64{1, 2, 3},
 				from: 1,
@@ -1898,7 +1898,7 @@ func TestDeleteRangeUint8(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []uint8{1, 2, 3},
 				from: 1,
@@ -2005,7 +2005,7 @@ func TestDeleteRangeUintptr(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "non empty slice - cut one element",
+			name: "non empty slice - delete one element",
 			args: args{
 				a:    []uintptr{1, 2, 3},
 				from: 1,
