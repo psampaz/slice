@@ -8,11 +8,11 @@ func DeleteRangeBool(a []bool, from, to int) ([]bool, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -29,11 +29,11 @@ func DeleteRangeByte(a []byte, from, to int) ([]byte, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -50,11 +50,11 @@ func DeleteRangeComplex128(a []complex128, from, to int) ([]complex128, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -71,11 +71,11 @@ func DeleteRangeComplex64(a []complex64, from, to int) ([]complex64, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -92,11 +92,11 @@ func DeleteRangeFloat32(a []float32, from, to int) ([]float32, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -113,11 +113,11 @@ func DeleteRangeFloat64(a []float64, from, to int) ([]float64, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -134,11 +134,11 @@ func DeleteRangeInt(a []int, from, to int) ([]int, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -155,11 +155,11 @@ func DeleteRangeInt16(a []int16, from, to int) ([]int16, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -176,11 +176,11 @@ func DeleteRangeInt32(a []int32, from, to int) ([]int32, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -197,11 +197,11 @@ func DeleteRangeInt64(a []int64, from, to int) ([]int64, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -218,11 +218,11 @@ func DeleteRangeInt8(a []int8, from, to int) ([]int8, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -239,11 +239,11 @@ func DeleteRangeRune(a []rune, from, to int) ([]rune, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -260,11 +260,11 @@ func DeleteRangeString(a []string, from, to int) ([]string, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -281,11 +281,11 @@ func DeleteRangeUint(a []uint, from, to int) ([]uint, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -302,11 +302,11 @@ func DeleteRangeUint16(a []uint16, from, to int) ([]uint16, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -323,11 +323,11 @@ func DeleteRangeUint32(a []uint32, from, to int) ([]uint32, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -344,11 +344,11 @@ func DeleteRangeUint64(a []uint64, from, to int) ([]uint64, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -365,11 +365,11 @@ func DeleteRangeUint8(a []uint8, from, to int) ([]uint8, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
@@ -386,11 +386,11 @@ func DeleteRangeUintptr(a []uintptr, from, to int) ([]uintptr, error) {
 		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
-	if from < 0 {
+	if from < 0 || from > len(a)-1 {
 		return nil, errors.New("from index out of bounds")
 	}
 
-	if to > len(a)-1 {
+	if to < 0 || to > len(a)-1 {
 		return nil, errors.New("to index out of bounds")
 	}
 
