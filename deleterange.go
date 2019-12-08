@@ -5,7 +5,7 @@ import "errors"
 // DeleteRangeBool deletes the elements between from and to index (inclusive) from a bool slice
 func DeleteRangeBool(a []bool, from, to int) ([]bool, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -26,7 +26,7 @@ func DeleteRangeBool(a []bool, from, to int) ([]bool, error) {
 // DeleteRangeByte deletes the elements between from and to index (inclusive) from a byte slice
 func DeleteRangeByte(a []byte, from, to int) ([]byte, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -47,7 +47,7 @@ func DeleteRangeByte(a []byte, from, to int) ([]byte, error) {
 // DeleteRangeComplex128 deletes the elements between from and to index (inclusive) from a complex128 slice
 func DeleteRangeComplex128(a []complex128, from, to int) ([]complex128, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -68,7 +68,7 @@ func DeleteRangeComplex128(a []complex128, from, to int) ([]complex128, error) {
 // DeleteRangeComplex64 deletes the elements between from and to index (inclusive) from a complex64 slice
 func DeleteRangeComplex64(a []complex64, from, to int) ([]complex64, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -89,7 +89,7 @@ func DeleteRangeComplex64(a []complex64, from, to int) ([]complex64, error) {
 // DeleteRangeFloat32 deletes the elements between from and to index (inclusive) from a float32 slice
 func DeleteRangeFloat32(a []float32, from, to int) ([]float32, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -110,7 +110,7 @@ func DeleteRangeFloat32(a []float32, from, to int) ([]float32, error) {
 // DeleteRangeFloat64 deletes the elements between from and to index (inclusive) from a float64 slice
 func DeleteRangeFloat64(a []float64, from, to int) ([]float64, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -131,7 +131,7 @@ func DeleteRangeFloat64(a []float64, from, to int) ([]float64, error) {
 // DeleteRangeInt deletes the elements between from and to index (inclusive) from a int slice
 func DeleteRangeInt(a []int, from, to int) ([]int, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -152,7 +152,7 @@ func DeleteRangeInt(a []int, from, to int) ([]int, error) {
 // DeleteRangeInt16 deletes the elements between from and to index (inclusive) from a int16 slice
 func DeleteRangeInt16(a []int16, from, to int) ([]int16, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -173,7 +173,7 @@ func DeleteRangeInt16(a []int16, from, to int) ([]int16, error) {
 // DeleteRangeInt32 deletes the elements between from and to index (inclusive) from a int32 slice
 func DeleteRangeInt32(a []int32, from, to int) ([]int32, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -194,7 +194,7 @@ func DeleteRangeInt32(a []int32, from, to int) ([]int32, error) {
 // DeleteRangeInt64 deletes the elements between from and to index (inclusive) from a int64 slice
 func DeleteRangeInt64(a []int64, from, to int) ([]int64, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -215,7 +215,7 @@ func DeleteRangeInt64(a []int64, from, to int) ([]int64, error) {
 // DeleteRangeInt8 deletes the elements between from and to index (inclusive) from a int8 slice
 func DeleteRangeInt8(a []int8, from, to int) ([]int8, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -236,7 +236,7 @@ func DeleteRangeInt8(a []int8, from, to int) ([]int8, error) {
 // DeleteRangeRune deletes the elements between from and to index (inclusive) from a rune slice
 func DeleteRangeRune(a []rune, from, to int) ([]rune, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -257,7 +257,7 @@ func DeleteRangeRune(a []rune, from, to int) ([]rune, error) {
 // DeleteRangeString deletes the elements between from and to index (inclusive) from a string slice
 func DeleteRangeString(a []string, from, to int) ([]string, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -278,7 +278,7 @@ func DeleteRangeString(a []string, from, to int) ([]string, error) {
 // DeleteRangeUint deletes the elements between from and to index (inclusive) from a uint slice
 func DeleteRangeUint(a []uint, from, to int) ([]uint, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -299,7 +299,7 @@ func DeleteRangeUint(a []uint, from, to int) ([]uint, error) {
 // DeleteRangeUint16 deletes the elements between from and to index (inclusive) from a uint16 slice
 func DeleteRangeUint16(a []uint16, from, to int) ([]uint16, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -320,7 +320,7 @@ func DeleteRangeUint16(a []uint16, from, to int) ([]uint16, error) {
 // DeleteRangeUint32 deletes the elements between from and to index (inclusive) from a uint32 slice
 func DeleteRangeUint32(a []uint32, from, to int) ([]uint32, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -341,7 +341,7 @@ func DeleteRangeUint32(a []uint32, from, to int) ([]uint32, error) {
 // DeleteRangeUint64 deletes the elements between from and to index (inclusive) from a uint64 slice
 func DeleteRangeUint64(a []uint64, from, to int) ([]uint64, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -362,7 +362,7 @@ func DeleteRangeUint64(a []uint64, from, to int) ([]uint64, error) {
 // DeleteRangeUint8 deletes the elements between from and to index (inclusive) from a uint8 slice
 func DeleteRangeUint8(a []uint8, from, to int) ([]uint8, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
@@ -383,7 +383,7 @@ func DeleteRangeUint8(a []uint8, from, to int) ([]uint8, error) {
 // DeleteRangeUintptr deletes the elements between from and to index (inclusive) from a uintptr slice
 func DeleteRangeUintptr(a []uintptr, from, to int) ([]uintptr, error) {
 	if len(a) == 0 {
-		return nil, errors.New("Can't cut a nil or empty slice")
+		return nil, errors.New("Cannot delete from a nil or empty slice")
 	}
 
 	if from < 0 {
