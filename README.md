@@ -20,25 +20,25 @@ go get github.com/psampaz/slice
 
 \- = Not yet implemented
 
-|            | bool | byte | complex(all) | float(all) | int(all) | string | uint(all) | uintptr |
-| ---------- | ---- | ---- | ------------ | ---------- | -------- | ------ | --------- | ------- |
-| Batch      | -    | -    | -            | -          | -        | -      | -         | -       | 
-| Contains   | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Copy       | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Deduplicate| ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Delete     | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| DeleteMany | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Filter     | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       |
-| Insert     | -    | -    | -            | -          | -        | -      | -         | -       | 
-| Max        | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
-| Min        | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
-| Pop        | -    | -    | -            | -          | -        | -      | -         | -       |
-| Push       | -    | -    | -            | -          | -        | -      | -         | -       |
-| Reverse    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Shift      | -    | -    | -            | -          | -        | -      | -         | -       | 
-| Shuffle    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-| Sum        | ✕    | ✔    | ✔            | ✔          | ✔        | ✕      | ✔         | ✔       | 
-| Unshift    | -    | -    | -            | -          | -        | -      | -         | -       | 
+|             | bool | byte | complex(all) | float(all) | int(all) | string | uint(all) | uintptr |
+| ----------- | ---- | ---- | ------------ | ---------- | -------- | ------ | --------- | ------- |
+| Batch       | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Contains    | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Copy        | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Deduplicate | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Delete      | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| DeleteRange | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Filter      | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       |
+| Insert      | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Max         | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
+| Min         | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
+| Pop         | -    | -    | -            | -          | -        | -      | -         | -       |
+| Push        | -    | -    | -            | -          | -        | -      | -         | -       |
+| Reverse     | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Shift       | -    | -    | -            | -          | -        | -      | -         | -       | 
+| Shuffle     | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
+| Sum         | ✕    | ✔    | ✔            | ✔          | ✔        | ✕      | ✔         | ✔       | 
+| Unshift     | -    | -    | -            | -          | -        | -      | -         | -       | 
 
 # Examples
 
@@ -58,12 +58,12 @@ Delete removes an element at a specific index of a slice. An error is return in 
     a, err = slice.DeleteInt(a, 2) // [1, 2, 4, 5], nil
 ```
 
-## slice.DeleteMany
+## slice.DeleteRange
 
-DeleteMany deletes the elements between from and to index (inclusive) from a slice. An error is return in case the index is out of bounds or the slice is nil or empty.
+DeleteRange deletes the elements between from and to index (inclusive) from a slice. An error is return in case the index is out of bounds or the slice is nil or empty.
 ```go
     a := []int{1, 2, 3, 4, 5}
-    a, err = slice.DeleteManyInt(a, 2, 3) // [1, 2, 5], nil
+    a, err = slice.DeleteRangeInt(a, 2, 3) // [1, 2, 5], nil
 ```
 
 ## slice.Contains
