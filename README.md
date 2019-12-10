@@ -27,7 +27,7 @@ go get github.com/psampaz/slice
 | Copy        | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Deduplicate | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Delete      | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
-|
+| DeleteRange | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Filter      | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       |
 | Insert      | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Max         | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
