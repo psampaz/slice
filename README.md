@@ -32,7 +32,7 @@ go get github.com/psampaz/slice
 | Insert      | -    | -    | -            | -          | -        | -      | -         | -       | 
 | Max         | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
 | Min         | ✕    | ✔    | ✕            | ✔          | ✔        | ✕      | ✔         | ✔       |
-| Pop         | -    | -    | -            | -          | -        | -      | -         | -       |
+| Pop         | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       |
 | Push        | -    | -    | -            | -          | -        | -      | -         | -       |
 | Reverse     | ✔    | ✔    | ✔            | ✔          | ✔        | ✔      | ✔         | ✔       | 
 | Shift       | -    | -    | -            | -          | -        | -      | -         | -       | 
@@ -109,6 +109,14 @@ Min returns the minimum value of a slice or an error in case of a nil or empty s
 ```go
     a := []int{1, 2, 3, 0, 4, 5}
     min, err := slice.MinInt(a) // 0, nil
+```
+
+## slice.Pop
+
+Pop removes and returns the last value a slice and the remaining slice. An error is returned in case of a nil or empty slice.
+```go
+    a := []int{1, 2, 3, 4, 5}
+    v, a, err := slice.PopInt(a) // 5, [1, 2, 3, 4], nil
 ```
 
 ## slice.Reverse

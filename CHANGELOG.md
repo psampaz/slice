@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Added
 - Delete operation
 - DeleteRange operation
+- Pop operation
 - Shuffle operation
 
 ## [v0.1.0] 2019-12-03
