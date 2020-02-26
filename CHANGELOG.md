@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - DeleteRange operation
 - Pop operation
 - Shuffle operation
-- Test on Go 1.14
+- Tests on Go 1.14
 
 ## [v0.1.0] 2019-12-03
 ### Added
