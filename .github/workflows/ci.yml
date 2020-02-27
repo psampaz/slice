@@ -5,7 +5,7 @@ jobs:
   tests:
     strategy:
       matrix:
-        go-version: [1.11.x, 1.12.x, 1.13.x]
+        go-version: [1.11.x, 1.12.x, 1.13.x, 1.14.x]
         platform: [ubuntu-latest, macos-latest, windows-latest]  
     name: tests
     runs-on: ${{ matrix.platform }}
@@ -21,7 +21,7 @@ jobs:
   coverage:
     strategy:
       matrix:
-        go-version: [1.13.x]
+        go-version: [1.14.x]
         platform: [ubuntu-latest]  
     name: coverage
     runs-on: ${{ matrix.platform }}
@@ -35,7 +35,7 @@ jobs:
       - run: |
           go test -v -race -cover -coverprofile=coverage.txt -covermode=atomic ./...
       - name: Upload coverage to Codecov  
-        uses: codecov/codecov-action@v1.0.4
+        uses: codecov/codecov-action@v1.0.5
         with:
           token: ${{secrets.CODECOV_TOKEN}}
           file: ./coverage.txt
